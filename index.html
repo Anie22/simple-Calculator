@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drafto Scientific Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="container">
+            <div class="calculator-holder">
+                <div class="cal-holder">
+                    <div class="cal-header">
+                        <h3 class="cal-text">Drafto</h3>
+                        <p class="cal-par"><sup>science</sup></p>
+                    </div>
+                    <div class="cal-screen">
+                        <div class="screen" id="screen_display">
+                            <div class="text" id="text-screen">
+                                <div class="large-holder">
+                                    <div class="larger-text input"></div>
+                                    <div class="blink">-</div>
+                                </div>
+                                <span class="medium-text output">0</span>
+                            </div>
+                            <div class="mode-display hidden" id="mode">
+                                <div class="stan">
+                                    <span>Standard</span>
+                                    <span>1</span>
+                                </div>
+                                <div class="temp">
+                                    <span>Temperature</span>
+                                    <span>2</span>
+                                </div>
+                            </div>
+                            <div class="temperatur-reader hidden" id="temp">
+                                <div class="input-converter">
+                                    <span>0</span>
+                                    <span><sup>&SmallCircle;</sup>C</span>
+                                </div>
+                                <div class="result-converter">
+                                    <p>Equals</p>
+                                    <div class="result">
+                                        <span>32</span>
+                                        <span><sup>&SmallCircle;</sup>F</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cal-keys">
+                        <div class="function-keys">
+                            <div class="on-key">
+                                <button class="On key">on</button>
+                                <button class="Off-Key key">ac</button>
+                            </div>
+                            <div class="first-keys">
+                                <div class="frac-key">
+                                    <button class="key"><big>a</big><small>b/c</small></button>
+                                </div>
+                                <div class="square-root-key">
+                                    <button class="key">&Sqrt;</button>
+                                </div>
+                                <div class="bracket-key1">
+                                    <button class="key">(</button>
+                                </div>
+                                <div class="bracket-key2">
+                                    <button class="key">)</button>
+                                </div>
+                                <div class="square-key">
+                                    <button class="key">x&sup2;</button>
+                                </div>
+                                <div class="caret-key">
+                                    <button class="key">^</button>
+                                </div>
+                            </div>
+                            <div class="second-keys">
+                                <div class="sin-key">
+                                    <button onclick="sin()">Sin</button>
+                                </div>
+                                <div class="cos-key">
+                                    <button onclick="cos()">Cos</button>
+                                </div>
+                                <div class="tan-key">
+                                    <button onclick="tan()">Tan</button>
+                                </div>
+                                <div class="raise-power-key">
+                                    <button class="key">x<sup>-1</sup></button>
+                                </div>
+                                <div class="per-key">
+                                    <button class="key">%</button>
+                                </div>
+                                <div class="cube-key">
+                                    <button class="key">x&sup3</button>
+                                </div>
+                            </div>
+                            <div class="third-keys">
+                                <div class="other-key">
+                                    <button><sup>x</sup>&Sqrt;</button>
+                                </div>
+                                <div class="reverse-sin">
+                                    <button>Sec</button>
+                                </div>
+                                <div class="reverse-cos">
+                                    <button>Csc</button>
+                                </div>
+                                <div class="reverse-tan">
+                                    <button>Cot</button>
+                                </div>
+                                <div class="x-fac">
+                                    <button>x!</button>
+                                </div>
+                                <div class="ncr-fac">
+                                    <button>nCr</button>
+                                </div>
+                            </div>
+                            <div class="fourth-keys">
+                                <div class="log-key">
+                                    <button>log</button>
+                                </div>
+                                <div class="in-key">
+                                    <button>In</button>
+                                </div>
+                            </div>
+                            <div class="arrow-keys-holder">
+                                <div class="arrow-keys">
+                                    <button>&blacktriangle;</button>
+                                    <div class="arrow-keys-2">
+                                        <button>&blacktriangleleft;</button>
+                                        <button>&blacktriangleright;</button>
+                                    </div>
+                                    <button>&blacktriangledown;</button>
+                                </div>
+                            </div>
+                            <div class="fifth-keys">
+                                <div class="shift-key">
+                                    <button>Shift</button>
+                                </div>
+                                <div class="mode-key">
+                                    <button id="mode-control">Mode</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="number-keys">
+                            <div class="first-numbers">
+                                <div class="seven-key">
+                                    <button class="key">7</button>
+                                </div>
+                                <div class="eight-key">
+                                    <button class="key">8</button>
+                                </div>
+                                <div class="nine-key">
+                                    <button class="key">9</button>
+                                </div>
+                                <div>
+                                    <button class="del-key key">d</button>
+                                </div>
+                                <div>
+                                    <button class="del-all-key key">del</button>
+                                </div>
+                            </div>
+                            <div class="second-numbers">
+                                <div class="four-key">
+                                    <button class="key">4</button>
+                                </div>
+                                <div class="five-key">
+                                    <button class="key">5</button>
+                                </div>
+                                <div class="six-key">
+                                    <button class="key">6</button>
+                                </div>
+                                <div class="mul-key">
+                                    <button class="key">&times;</button>
+                                </div>
+                                <div class="div-key">
+                                    <button class="key">&div;</button>
+                                </div>
+                            </div>
+                            <div class="third-numbers">
+                                <div class="one-key">
+                                    <button class="key">1</button>
+                                </div>
+                                <div class="two-key">
+                                    <button class="key">2</button>
+                                </div>
+                                <div class="three-key">
+                                    <button class="key">3</button>
+                                </div>
+                                <div class="add-key">
+                                    <button class="key">+</button>
+                                </div>
+                                <div class="minus-key">
+                                    <button class="key">-</button>
+                                </div>
+                            </div>
+                            <div class="fourth-numbers">
+                                <div class="zero-key">
+                                    <button class="key">0</button>
+                                </div>
+                                <div class="double-zero-key">
+                                    <button class="key">00</button>
+                                </div>
+                                <div class="dot-key">
+                                    <button class="key">.</button>
+                                </div>
+                                <div class="ans-key">
+                                    <button class="key">ans</button>
+                                </div>
+                                <div class="equal-key">
+                                    <button class="key">=</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/cal.js"></script>
+</html>

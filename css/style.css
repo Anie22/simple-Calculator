@@ -1,0 +1,345 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.calculator{
+    background: #5574db;
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    padding: 35.5px calc(1.5rem * 5);
+    margin: 0px auto;
+}
+@media screen and (max-width: 320px) {
+    .container{
+        padding: 0px;
+    }
+}
+
+.calculator-holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.cal-holder{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 15px;
+    background: #f8f4f4;
+}
+@media screen and (max-width: 320px) {
+    .cal-holder{
+       border-radius: 0px;
+    }
+}
+
+.cal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 13px;
+    height: 42px;
+    background: rgba(12, 12, 12, 0.281);
+    border-radius: 15px 15px 0 0;
+}
+@media screen and (max-width: 320px) {
+    .cal-header{
+       border-radius: 0px;
+    }
+}
+
+.cal-screen{
+    height: 95px;
+    margin-bottom: 0.4px;
+}
+
+.screen{
+    height: inherit;
+    background: rgba(24, 24, 24, 0.089);
+    align-items: flex-end;
+    padding: 17px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+.large-holder{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.blink{
+    font-size: 2.2rem;
+    animation: blinking 1s linear infinite;
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.larger-text{
+    font-size: 32px;
+}
+
+.medium-text{
+    text-align: end;
+    font-size: 22px;
+}
+
+.mode-display{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.stan,
+.temp{
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    text-align: center;
+    gap: 5px;
+}
+
+.temperatur-reader{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-converter,
+.result{
+    display: flex;
+    align-items: center;
+}
+
+.result-converter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.cal-keys{
+    padding: 18px 16px;
+}
+
+.function-keys,
+.number-keys,
+.tem-number-keys{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.first-keys,
+.second-keys,
+.third-keys,
+.fourth-keys,
+.fifth-keys,
+.on-key{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.first-keys button,
+.second-keys button,
+.on-key>button,
+.third-keys button,
+.fourth-keys button,
+.arrow-keys button,
+.fifth-keys button{
+    width: 40px;
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: hsl(226, 65%, 80%);
+    cursor: pointer;
+}
+
+.on-key button,
+.del-key,
+.del-all-key{
+    background-color: hsl(352, 100%, 60%);
+    color: hsl(0, 22%, 96%);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.fourth-keys{
+    position: relative;
+    bottom: -9px;
+    left: 0;
+    z-index: 1;
+}
+
+.arrow-keys-holder{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: -25px;
+}
+
+.arrow-keys{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.arrow-keys button:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.arrow-keys-2{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.fifth-keys{
+    position: relative;
+    top: -63px;
+    left: 0;
+}
+
+.number-keys{
+    margin-top: -30px;
+}
+
+.first-numbers,
+.second-numbers,
+.third-numbers,
+.fourth-numbers{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.first-numbers button,
+.second-numbers button,
+.third-numbers button,
+.fourth-numbers button{
+    width: 40px;
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.zero-key button,
+.double-zero-key button,
+.dot-key button,
+.one-key button,
+.two-key button,
+.three-key button,
+.four-key button,
+.five-key button,
+.six-key button,
+.seven-key button,
+.eight-key button,
+.nine-key button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(0, 0%, 15%);
+    color: hsl(0, 22%, 96%);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.dot-key button{
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+.add-key button,
+.minus-key button,
+.div-key button,
+.mul-key button,
+.ans-key button,
+.equal-key button{
+    background: hsl(226, 65%, 80%);
+    font-size: 23px;
+}
+
+.ans-key button{
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.temperature-cal{
+    padding: 18px 16px;
+}
+
+.tem{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.tem button{
+    width: 150px;
+    height: 51.5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: hsl(226, 65%, 80%);
+    cursor: pointer;
+}
+
+.tem-keys{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.tem-keys button{
+    width: 45px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: hsl(226, 65%, 80%);
+    cursor: pointer;
+}
+
+.tem-number-keys{
+    margin-top: 30px;
+}
